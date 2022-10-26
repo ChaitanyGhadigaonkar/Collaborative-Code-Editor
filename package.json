@@ -6,9 +6,19 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "codemirror": "^5.48.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
     "react": "^18.2.0",
+    "react-avatar": "^5.0.3",
+    "react-codemirror": "^1.0.0",
+    "react-codemirror2": "^7.2.1",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
     "react-scripts": "5.0.1",
+    "socket.io": "^4.5.2",
+    "socket.io-client": "^4.5.2",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "react-router-dom": "^6.4.1"
   }
 }
