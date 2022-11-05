@@ -2,15 +2,24 @@
    background  #0e1525
    file structure   #2b3245
 */
-*{
+html {
+  font-size: 62.5%;
+  /* 1 rem = 10px */
+}
+
+* {
   margin: 0;
   padding: 0;
   /* color: white; */
 }
-body{
+#root{
+  min-height: 100vh;
+}
+body {
   background-color: #0e1525;
 }
-.main{
+
+.main {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -18,40 +27,47 @@ body{
   align-items: center;
   background-color: #0e1525;
 }
-.cr-box{
+
+.cr-box {
   border: 2px solid #2b3245;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-justify-content: center;
+  justify-content: center;
   align-items: center;
   width: 700px;
   height: 420px;
   background-color: #2b3245;
 }
-.logo-section{
+
+.logo-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.logo-section .line{
+
+.logo-section .line {
   height: 120px;
-  width: 1px; 
+  width: 1px;
   border: 1px solid black;
 }
-.logo-section img{
+
+.logo-section img {
   height: 120px;
   width: 120px;
 }
-.logo-head{
+
+.logo-head {
   margin: 0px 10px;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: white;
 }
-.logo-head p{
+
+.logo-head p {
   color: #00fff3;
 }
-.form-section{
+
+.form-section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -60,271 +76,345 @@ justify-content: center;
   margin-top: 15px;
 }
 
-.form-section p{
-  font-size: 18px;
-  
+.form-section p {
+  font-size: 1.8rem;
+
 }
-input{
-  height: 25px;
+ 
+.form-section input {
+  height: 40px;
   border: 2px solid black;
   border-radius: 6px;
   padding: 5px 7px;
-  font-size: 18px;
+  font-size: 1.8rem;
   margin: 5px 0px;
   color: black;
   width: 350px;
 }
-input[type=button]{
+
+.form-section input[type=button] {
   height: 40px;
   width: 75px;
   background-color: #0053a6;
   color: white;
 }
-input[type=button]:hover{
+
+.form-section input[type=button]:hover {
   cursor: pointer;
 }
-p{
+
+p {
   color: white;
 }
-p a{
+
+p a {
   color: #00fff3;
 }
 
 
 /* Editor nav style */
-#editor-nav{
+#editor-nav {
   display: grid;
-  grid-template-columns:  0.8fr 3fr 0.5fr;
+  grid-template-columns: 0.8fr 3fr 0.5fr;
   place-items: center;
-  height: 80px;
-  background-color:  #2b3245;
+  height: 8rem;
+  background-color: #2b3245;
 }
-.logo img{
+
+.logo img {
   height: 70px;
   width: 70px;
   border-radius: 50%;
   margin-left: 10px;
 }
-.logo{
+
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.logo-header{
+
+.logo-header {
   margin-left: 10px;
 }
-.logo h1{
+
+.logo h1 {
   font-size: 12px;
   color: white;
+  padding-top: 12px;
 }
-.logo p{
+
+.logo p {
   font-size: 12px;
 }
-.nav-mid{
+
+.nav-mid {
   display: flex;
   width: 100%;
   justify-content: space-between;
 
 }
-.room-owner{
 
- 
-}
-.connected-users{
+.room-owner {}
+
+.connected-users {
   width: 200px;
   display: flex;
   justify-content: space-between;
 
 }
-.connected-users Avatar{
-   margin: 0px 10px;
+
+.connected-users Avatar {
+  margin: 0px 10px;
 }
 
 
 
-.invite{
+.invite {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content:flex-end;
   align-items: center;
   width: 100%;
 }
-.invite :hover{
+
+.invite :hover {
   cursor: pointer;
 }
-.invite img{
+
+.invite img {
   height: 60px;
   width: 60px;
 }
 
-.invite p{
+.invite p {
   color: white;
   font-size: 15px;
+}
+.invite button{
+  width: 210px;
 }
 
 
 /* Editor section */
-.main-eWindow{
+.main-eWindow {
   /* width: 100vw; */
   display: grid;
   grid-template-columns: 1fr;
-  height: 88vh;
+  height: 92vh;
   margin: 5px 0;
 }
 
 
 
-.leftEditor{
+.leftEditor {
   border: 1px solid black;
   border-radius: 15px;
- 
+
 }
-.rightEditor{
+
+.rightEditor {
   border: 1px solid black;
   border-radius: 15px;
 }
-.midEditor{
+
+.midEditor {
   border: 1px solid black;
   border-radius: 15px;
   margin: 0px 5px;
-  
+
   /* height: 88vh; */
 }
 
 
 .CodeMirror {
   height: 100% !important;
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 2rem;
+  line-height: 1.3;
   padding-top: 20px;
-   border-radius: 15px;
+  border-radius: 10px;
+  caret-color: red !important;
 
 }
 
 /* home page  */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-body{
-    /* background-color: #0e1525; */
-  }
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif;
+
+body {
+  /* background-color: #0e1525; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-#main-nav{
-    width: 100vw;
-    height: 75px;
-    /* border: 2px solid black; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+#main-nav {
+  width: 100vw;
+  height: 75px;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #main-nav .logo img {
-    height: 75px;
-    width: 75px;
+  height: 75px;
+  width: 75px;
 }
 
 #main-nav .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .logo-heading p {
-    font-size: 10px;
+  font-size: 1rem;
 }
 
 .logo-heading h1 {
-    font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .nav-mid {
-    width: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 25px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 25px;
 }
 
 .nav-mid li {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-mid li a {
-    text-decoration: none;
-    color: white;
-    /* font-weight: bold; */
-    font-size: 18px;
+  text-decoration: none;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 1.8rem;
 
 }
+
 .nav-mid li a:hover {
-    color: #0053a6;
+  color: #0053a6;
 
 
 }
-.other{
-    
+
+.other {}
+
+.HomeButtons{
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 0px 10px;
+  background-color: #162534;
+  color: white;
+
 }
-.other button{
-    height: 40px;
-    width: 100px;
-    font-size: 16px;
-    /* font-weight: bold; */
-    border: 1px solid black;
-    border-radius: 8px;
-    margin: 0px 10px;
-    background-color: #162534;
-    color: white;
-    
-}
-.other button:hover{
-    cursor: pointer;
-    background-color: #0053a6;
+
+.HomeButtons:hover {
+  cursor: pointer;
+  background-color: #0053a6;
 }
 
 
 
 /* mid container */
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh;
-}
-main h1{
-color: white;
-font-size: 54px;
-
-}
-.main-para{
-    text-align: center;
-    width: 690px;
-    margin-top: 15px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
 }
 
-main p{
-    color: white;
-    font-size: 24px;
+main h1 {
+  color: white;
+  font-size: 5.4rem;
+
 }
-main button{
-    height: 60px;
-    width: 160px;
-    font-size: 20px;
-    /* font-weight: bold; */
-    /* border: 1px solid black; */
-    border-radius: 8px;
-    margin: 15px 0px;
-    background-color: #0053a6;
-    color: white;
-    
+
+.main-para {
+  text-align: center;
+  width: 690px;
+  margin-top: 15px;
 }
-main button:hover{
-    background-color: #162534;
-    cursor: pointer;
+
+main p {
+  color: white;
+  font-size: 2.4rem;
+}
+
+main button {
+  height: 60px;
+  width: 160px;
+  font-size: 2rem;
+  /* font-weight: bold; */
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  margin: 15px 0px;
+  background-color: #0053a6;
+  color: white;
+
+}
+
+main button:hover {
+  background-color: #162534;
+  cursor: pointer;
+}
+
+/* Register page */
+
+.register {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid white; */
+
+}
+.register H1 {
+  font-size: 2rem;
+  color: white;
+  
+}
+
+.formClass form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  height: 180px;
+  width: 300px;
+  margin: 2px auto;
+}
+.formClass form input{
+  width: 250px;
+  height: 33px;
+  padding: 3px 10px;
+  font-size: 1.6rem;
+  /* border: 2px solid #0053a6; */
+  border-radius: 6px;
+  margin: 5px 0px;
+}
+.formClass form input[type= button]{
+  background-color: #0053a6;
+  color: white;
 }

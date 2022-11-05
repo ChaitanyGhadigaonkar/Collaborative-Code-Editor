@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from '../Images/logo.png'
+import logo from '../Images/logo.gif'
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
@@ -38,6 +38,7 @@ export default function CreateRoom() {
         username
       }
     })
+    
   }
 
   return (
@@ -45,7 +46,7 @@ export default function CreateRoom() {
       <div className="main">
         <div className="cr-box">
           <div className="logo-section">
-            <img src={logo} alt="logo" srcSet="" />
+            <img src={logo} alt="logo" />
             <div className="line"></div>
             <div className="logo-head">
               <h1>Collaborative Code Editor</h1>
@@ -53,7 +54,7 @@ export default function CreateRoom() {
             </div>
           </div>
           <div className="form-section">
-            <p>Paste invitaion room id here</p>
+            <p>Paste invitation room id here</p>
             <input type="text" placeholder='Room ID' onChange={handleRoomIdChange} onKeyUp={handleEnterEvent} value={id} />
             <input type="text" placeholder='Username' onChange={handleUsernameChange} onKeyUp={handleEnterEvent} value={username} />
             <input type="button" value="Join" onClick={onJoinClick} />
