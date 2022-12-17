@@ -38,7 +38,7 @@ export default function CreateRoom() {
         username
       }
     })
-    
+
   }
 
   return (

@@ -380,7 +380,7 @@ main button:hover {
 
 .register {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -401,11 +401,20 @@ main button:hover {
   justify-content: center;
   align-items: center;
   border: 2px solid black;
-  height: 180px;
+  height: 250px;
   width: 300px;
   margin: 2px auto;
 }
+.formClass form  p {
+  font-size: 1.6rem;
+
+}
+.formClass form  p a{
+  margin-left: 5px;
+  margin-top: 5px;
+}
 .formClass form input{
+  box-sizing: border-box;
   width: 250px;
   height: 33px;
   padding: 3px 10px;
@@ -413,6 +422,11 @@ main button:hover {
   /* border: 2px solid #0053a6; */
   border-radius: 6px;
   margin: 5px 0px;
+  outline: none;
+  /* color: white; */
+}
+.formClass form input[type=text]:focus {
+border: 2px solid whitesmoke;
 }
 .formClass form input[type= button]{
   background-color: #0053a6;

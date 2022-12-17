@@ -3,12 +3,19 @@ const { Server } = require('socket.io')
 const http = require('http');
 const cors = require('cors');
 const ACTIONS = require('../src/Components/Actions');
-// const { JOINED } = require('../src/Components/Actions');
+require('./db/conn');
 
 const app = express();
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
+app.use(cors());
+
+
+// socket work from here
 const server = http.createServer(app);
-
-
+const router = require('./routes/user');
 const userSocketMap = {};  //should create a database in order to save the info about the server in case if server closed then all will get cleared
 
 function getAllConnectedClients(roomId) {
@@ -68,7 +75,15 @@ io.on('connection', (socket) => {
 
 });
 
+// socket complete here
 
+
+// Routes for the user
+// path will be /api/auth/user
+app.use("/api/auth",router);
+app.get("/",(req,res)=>{
+    res.send("hello from expresss");
+})
 
 const PORT = 5000
 server.listen(PORT, () => console.log(`Listening on port ${PORT}`));

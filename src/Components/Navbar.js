@@ -7,18 +7,16 @@ import {
   Routes,
   Link
 } from "react-router-dom";
-export default function Navbar() {
- 
+export default function Navbar({others}) {
+    const myStyle = {
+        display : "none"
+    }
   return (
     
     <>
     <nav id="main-nav">
         <div className="logo">
             <img src={logo} alt="logo" srcSet=""/>
-            {/* <div className="logo-heading">
-                <h1>Collaborative Code Editor</h1>
-                <p>Realtime collaboration</p>
-            </div> */}
             <div className="nav-mid">
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About Us</Link></li>
