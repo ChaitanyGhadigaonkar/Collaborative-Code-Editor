@@ -4,22 +4,24 @@ const validator = require('validator');
 const userSchema = new mongoose.Schema({
     username:{
         type:String,
-        minLength:5
+        minLength:5,
+        require:true
     
     },
     email:{
         type:String,
         unique:true,
+        require:true,
         validator(value){
             if(!validator.isEmail(value)){
                 throw new Error("Email not valid");
-                return
             }
         }
     },
     password:{
         type:String,
         minLength:8,
+        require:true
     },
 });
 

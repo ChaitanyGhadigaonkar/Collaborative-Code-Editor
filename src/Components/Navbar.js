@@ -1,10 +1,6 @@
 import React from 'react'
 import logo from '../Images/logo.gif'
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Routes,
   Link
 } from "react-router-dom";
 export default function Navbar({others}) {

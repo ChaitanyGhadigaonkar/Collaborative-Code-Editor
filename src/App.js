@@ -1,4 +1,4 @@
-import './App.css';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 import Home from './Components/Home'
@@ -8,6 +8,7 @@ import Register from './Components/Register';
 import Login from './Components/Login';
 import About from './Components/About'
 import Contact from './Components/Contact'
+import Navbar from './Components/Navbar';
 function App() {
   return (
     <>
@@ -27,8 +28,9 @@ function App() {
       }}/>
     </div>
     <BrowserRouter>
+    <Navbar/>
     <Routes>
-      <Route path="/" element={<Home/>}/>
+      <Route index path="/" element={<Home/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/login" element={<Login/>}/>
       <Route path="/sign-up" element={<Register/>}/>

@@ -1,19 +1,11 @@
 import React, { useState, useRef, useEffect, } from 'react'
-import '../App.css'
-// import EditorNavbar from './EditorNavbar'
-import logo from '../Images/logo.gif';
-// import invite from '../Images/invite-icon.png';
-// import LeftEditor from './LeftEditor'
+
 import Editor from './Editor'
 import { initSocket } from '../socketInit'
 import ACTIONS from './Actions'
 import toast from 'react-hot-toast'
 import { useLocation, useParams, useNavigate, Navigate } from 'react-router-dom';
-import Client from './Client'
 import { io } from 'socket.io-client';
-// import RightEditor from './RightEditor'
-import Invite from './Invite'
-
 
 
 export default function EditorPage() {
@@ -27,7 +19,7 @@ export default function EditorPage() {
   // console.log(roomId);
   const [clients, SetClients] = useState([])
 
-  if (location.state===null) {
+  if (location.state === null) {
     console.log("Inside if condition that checks about direct entry instde the editor page");
     <Navigate to="/" replace={true} />
   }
@@ -85,14 +77,14 @@ export default function EditorPage() {
 
   }
 
-  const onLeaveRoomClick=()=>{
+  const onLeaveRoomClick = () => {
     reactNavigator(`/`);
 
   }
 
   return (
     <>
-      <nav id="editor-nav">
+      {/* <nav id="editor-nav">
         <div className="logo">
           <img src={logo} alt="logo" />
           <div className="logo-header">
@@ -103,13 +95,9 @@ export default function EditorPage() {
         <div className="nav-mid">
           <div className="room-owner">
           </div>
-          {/* <div className="run">
-            <input type="button" value="Run" />
-        </div> */}
           <div className="connected-users">
             {
               clients.map((client) => {
-                // console.log(client.username)
                 return <Client key={client.socketId} username={client.username} />
               })
             }
@@ -122,10 +110,8 @@ export default function EditorPage() {
           </button>
         </div>
 
-      </nav>
-
-
-
+      </nav> */}
+      
       <div className='main-eWindow'>
         {/* <LeftEditor/> */}
         <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code) => {
