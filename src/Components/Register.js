@@ -15,8 +15,8 @@ export default function Register() {
     console.log(credentials.password !== credentials.cPassword);
     if (credentials.password[0] !== credentials.cPassword[0]) {
       toast.error("Password and confirm password are not matching");
-      
-    }else{
+
+    } else {
       const response = await fetch(`${host}/api/auth/adduser`, {
         method: 'POST',
         headers: {
@@ -33,9 +33,6 @@ export default function Register() {
         navigator("/sign-up");
       }
     }
-
-    
-
   }
 
 
@@ -48,13 +45,13 @@ export default function Register() {
       <div className="formClass">
 
         <form method='post'  >
-          <input id='userInput' type="text" placeholder='username' name='username' value={credentials.username} required onChange={handleChange} />
-          <input id='emailInput' type="email" placeholder='Email address' name='email' value={credentials.email} required onChange={handleChange} />
-          <input id='passInput' type="password" placeholder='Password' name='password' value={credentials.password} required onChange={handleChange} />
-          <input type="password" placeholder='Confirm Password' name='cPassword' value={credentials.cPassword} required onChange={handleChange} />
-          <input type="button" value="+ Create Account" onClick={handleSubmit} />
+          <input id='userInput' type="text" placeholder='username' name='username' value={credentials.username} onChange={handleChange} required />
+          <input id='emailInput' type="email" placeholder='Email address' name='email' value={credentials.email} onChange={handleChange} required />
+          <input id='passInput' type="password" placeholder='Password' name='password' value={credentials.password} onChange={handleChange} required />
+          <input type="password" placeholder='Confirm Password' name='cPassword' value={credentials.cPassword} onChange={handleChange} required />
+          <input type="button"  value="+ Create Account" onClick={handleSubmit} />
           <p>Have an account ?
-            <Link to="/login" >Log in</Link></p>
+            <Link to="/login">Log in</Link></p>
 
         </form>
       </div>

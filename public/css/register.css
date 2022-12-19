@@ -1,0 +1,119 @@
+/* Register page */
+
+.register {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+  
+  }
+  .register H1 {
+    font-size: 2rem;
+    color: white;
+    
+  }
+  
+  .formClass form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    height: 250px;
+    width: 300px;
+    margin: 2px auto;
+  }
+  .formClass form  p {
+    font-size: 1.6rem;
+  
+  }
+  .formClass form  p a{
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .formClass form input{
+    box-sizing: border-box;
+    width: 250px;
+    height: 33px;
+    padding: 3px 10px;
+    font-size: 1.6rem;
+    /* border: 2px solid #0053a6; */
+    border-radius: 6px;
+    margin: 5px 0px;
+    outline: none;
+    /* color: white; */
+  }
+  .formClass form input[type=text]:focus {
+  border: 2px solid whitesmoke;
+  }
+  .formClass form input[type= button]{
+    background-color: #0053a6;
+    color: white;
+  }
+
+  /* login */
+  .login{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+
+    width: 300px;
+    gap: 10px;
+    margin: 2px auto;
+  }
+  .login form input{
+    box-sizing: border-box;
+    width: 250px;
+    height: 33px;
+    padding: 3px 10px;
+    font-size: 1.6rem;
+    border: 2px solid #0053a6;
+    border-radius: 6px;
+    margin: 5px 0px;
+    outline: none;
+    color: white;
+    background-color: #1c2333;
+    /* color: white; */
+  }
+  /* input[type=email],input[type=password]:active{
+    border: 1px solid #0d6efd;
+  }
+  input[type=email],input[type=password]:focus{
+    border: 1px solid #0d6efd;
+  } */
+
+  input::placeholder{
+  font-weight: 100;
+    font-size: 1.4rem;
+  }
+
+  form input:active{
+    border: 1px solid #0d6efd;
+  }
+  form input:hover{
+    border: 1px solid #4d70a5;
+  }
+  .loginBtn{
+    padding:  6px;
+    width: 75px;
+    background-color: #0053a6;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 6px;
+  }

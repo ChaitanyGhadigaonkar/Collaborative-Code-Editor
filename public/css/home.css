@@ -1,0 +1,138 @@
+/* home page  */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+  /* background-color: #0e1525; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+#main-nav {
+  width: 100vw;
+  height: 75px;
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-nav .logo img {
+  height: 75px;
+  width: 75px;
+}
+
+#main-nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.logo-heading p {
+  font-size: 1rem;
+}
+
+.logo-heading h1 {
+  font-size: 1.2rem;
+}
+
+.nav-mid {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+
+.nav-mid li {
+  list-style: none;
+}
+
+.nav-mid li a {
+  text-decoration: none;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 1.8rem;
+
+}
+
+.nav-mid li a:hover {
+  color: #0053a6;
+
+
+}
+
+.other {}
+
+.HomeButtons{
+  height: 40px;
+  width: 100px;
+  font-size: 16px;
+  /* font-weight: bold; */
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 0px 10px;
+  background-color: #162534;
+  color: white;
+
+}
+
+.HomeButtons:hover {
+  cursor: pointer;
+  background-color: #0053a6;
+}
+
+
+
+/* mid container */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+main h1 {
+  color: white;
+  font-size: 5.4rem;
+
+}
+
+.main-para {
+  text-align: center;
+  width: 690px;
+  margin-top: 15px;
+}
+
+main p {
+  color: white;
+  font-size: 2.4rem;
+}
+
+main button {
+  height: 60px;
+  width: 160px;
+  font-size: 2rem;
+  /* font-weight: bold; */
+  /* border: 1px solid black; */
+  border-radius: 8px;
+  margin: 15px 0px;
+  background-color: #0053a6;
+  color: white;
+
+}
+
+main button:hover {
+  background-color: #162534;
+  cursor: pointer;
+}

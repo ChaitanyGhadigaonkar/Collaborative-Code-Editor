@@ -6,17 +6,16 @@ const userSchema = new mongoose.Schema({
         type:String,
         minLength:5,
         require:true
-    
     },
     email:{
         type:String,
         unique:true,
-        require:true,
         validator(value){
             if(!validator.isEmail(value)){
                 throw new Error("Email not valid");
             }
-        }
+        },
+        require:true,
     },
     password:{
         type:String,
