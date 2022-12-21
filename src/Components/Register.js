@@ -12,7 +12,11 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(credentials.password !== credentials.cPassword);
+    // console.log(credentials.password !== credentials.cPassword);
+    if(!credentials.username || !credentials.email || !credentials.password || !credentials.cPassword){
+      toast.error("All fields are mandetory");
+      return
+    }
     if (credentials.password[0] !== credentials.cPassword[0]) {
       toast.error("Password and confirm password are not matching");
 

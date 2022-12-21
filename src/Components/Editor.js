@@ -1,4 +1,4 @@
-import React, { useEffect, useState,useRef } from 'react';
+import React, { useEffect,useRef } from 'react';
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/theme/dracula.css';
@@ -6,7 +6,7 @@ import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/closebrackets';
 import CodeMirror from 'codemirror';
 import ACTIONS from './Actions';
-import { ConfigProvider } from 'react-avatar';
+// import { ConfigProvider } from 'react-avatar';
 
 const Editor = ({socketRef,roomId,onCodeChange}) => {
   const editorRef=useRef(null);
@@ -24,7 +24,7 @@ const Editor = ({socketRef,roomId,onCodeChange}) => {
       );
       
       editorRef.current.on('change',(instance,changes)=>{
-        console.log('changes',changes);
+        // console.log('changes',changes);
         const {origin}=changes;
         // console.log(origin)
         const code=instance.getValue();
@@ -44,6 +44,7 @@ const Editor = ({socketRef,roomId,onCodeChange}) => {
       
     }
     init();
+    // eslint-disable-next-line
   },[]);
 
   useEffect(()=>{

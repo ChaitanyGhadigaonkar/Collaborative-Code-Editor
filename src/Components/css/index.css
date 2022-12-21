@@ -12,17 +12,21 @@ html {
   padding: 0;
   /* color: white; */
 }
-#root{
+
+#root {
   min-height: 100vh;
 }
+
 body {
   background-color: #0e1525;
 }
 
 .main {
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   display: flex;
+  flex-direction: column;
+  text-align: center;
   justify-content: center;
   align-items: center;
   background-color: #0e1525;
@@ -46,15 +50,16 @@ body {
   align-items: center;
 }
 
-.logo-section .line {
+/* .logo-section .line {
   height: 120px;
   width: 1px;
   border: 1px solid black;
-}
+} */
 
 .logo-section img {
   height: 120px;
   width: 120px;
+  /* border-radius: 50%; */
 }
 
 .logo-head {
@@ -80,7 +85,7 @@ body {
   font-size: 1.8rem;
 
 }
- 
+
 .form-section input {
   height: 40px;
   border: 2px solid black;
@@ -88,8 +93,11 @@ body {
   padding: 5px 7px;
   font-size: 1.8rem;
   margin: 5px 0px;
-  color: black;
+  color: white;
   width: 350px;
+  outline: none;
+  background-color: #1c2333;
+  border: 2px solid #0053a6;
 }
 
 .form-section input[type=button] {

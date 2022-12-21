@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../Images/logo.gif'
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
@@ -40,6 +40,15 @@ export default function CreateRoom() {
     })
 
   }
+
+  useEffect(()=>{
+    const ispresent = localStorage.getItem('authtoken');
+    if(!ispresent){
+      navigate("/login");
+      toast.success("please login first")
+    }
+    // eslint-disable-next-line
+  },[])
 
   return (
     <>

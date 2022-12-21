@@ -1,7 +1,7 @@
 import React from 'react'
 import { toast } from 'react-hot-toast';
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Login() {
@@ -9,11 +9,14 @@ export default function Login() {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
   const navigator = useNavigate();
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    // if (credentials.password[0] !== credentials.cPassword[0]) {
-    //   toast.error("Password and confirm password are not matching");
 
-    // } else {
+    e.preventDefault();
+
+    if (!credentials.email || !credentials.password) {
+      // console.log("Room Id and username required")
+      toast.error('email and passsword is required');
+      return
+    }
     const response = await fetch(`${host}/api/auth/login`, {
       method: 'POST',
       headers: {
@@ -23,7 +26,7 @@ export default function Login() {
     })
     const result = await response.json();
     if (result.success === true) {
-      toast.success('Sucessfully created the account');
+      toast.success('Sucessfully login ');
       localStorage.setItem("authtoken",result.authtoken);
       navigator("/create-room");
     } else {
@@ -44,6 +47,10 @@ export default function Login() {
         <input type="email" placeholder='Email address' id='emailInput' name='email' value={credentials.email} onChange={handleChange} required />
         <input type="password" placeholder='Password' id='passInput' name='password' value={credentials.password} onChange={handleChange} required />
         <button className='loginBtn' onClick={handleSubmit}>login</button>
+        <div className="forsignup">
+          <p>Don't have account ?</p>
+          <Link to="/sign-up">create account</Link>
+        </div>
       </form>
 
     </div>

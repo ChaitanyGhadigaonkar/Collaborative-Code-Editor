@@ -28,7 +28,7 @@
     margin: 2px auto;
   }
   .formClass form  p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   
   }
   .formClass form  p a{
@@ -41,18 +41,23 @@
     height: 33px;
     padding: 3px 10px;
     font-size: 1.6rem;
-    /* border: 2px solid #0053a6; */
     border-radius: 6px;
     margin: 5px 0px;
     outline: none;
-    /* color: white; */
-  }
-  .formClass form input[type=text]:focus {
-  border: 2px solid whitesmoke;
+    color: white;
+    background-color: #1c2333;
+    border: 2px solid #0053a6;
   }
   .formClass form input[type= button]{
     background-color: #0053a6;
     color: white;
+  }
+  
+  form input:active{
+    border: 1px solid #0d6efd;
+  }
+  form input:hover{
+    border: 1px solid #4d70a5;
   }
 
   /* login */
@@ -91,18 +96,18 @@
     background-color: #1c2333;
     /* color: white; */
   }
-  /* input[type=email],input[type=password]:active{
-    border: 1px solid #0d6efd;
-  }
-  input[type=email],input[type=password]:focus{
-    border: 1px solid #0d6efd;
-  } */
-
   input::placeholder{
   font-weight: 100;
     font-size: 1.4rem;
   }
 
+  form a{
+    text-decoration: none;
+  }
+
+  form p{
+    font-size: 1.4rem;
+  }
   form input:active{
     border: 1px solid #0d6efd;
   }
@@ -116,4 +121,19 @@
     font-size: 1.6rem;
     color: white;
     border-radius: 6px;
+  }
+
+
+  .forsignup{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .forsignup a{
+   text-decoration: none;
+   color: #00fff3;
+  }
+  .login h1{
+    font-size: 2rem;
   }

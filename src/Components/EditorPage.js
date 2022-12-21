@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect, } from 'react'
-
 import Editor from './Editor'
 import { initSocket } from '../socketInit'
 import ACTIONS from './Actions'
 import toast from 'react-hot-toast'
 import { useLocation, useParams, useNavigate, Navigate } from 'react-router-dom';
 import { io } from 'socket.io-client';
+import LeftComponent from './LeftComponent'
+import RightComponent from './RightComponent'
 
 
 export default function EditorPage() {
@@ -14,7 +15,7 @@ export default function EditorPage() {
   const location = useLocation();
   const { roomId } = useParams();
 
-  console.log(location)
+  // console.log(location)
   const reactNavigator = useNavigate();
   // console.log(roomId);
   const [clients, SetClients] = useState([])
@@ -50,7 +51,7 @@ export default function EditorPage() {
       //listening for disconnecting
       socketRef.current.on(ACTIONS.DISCONNECTED, ({ socketId, username, clients }) => {
         toast.success(`${username} left the meet`);
-        console.log(`${username} left the meet`);
+        // console.log(`${username} left the meet`);
         SetClients((prev) => {
           return prev.filter((client) => client.sockedId !== socketId)
         })
@@ -111,13 +112,15 @@ export default function EditorPage() {
         </div>
 
       </nav> */}
-      
+
       <div className='main-eWindow'>
-        {/* <LeftEditor/> */}
+        <LeftComponent clients={clients}/>
+        
         <Editor socketRef={socketRef} roomId={roomId} onCodeChange={(code) => {
           codeRef.current = code;
         }} />
-        {/* <RightEditor/> */}
+        <RightComponent/>
+
       </div>
     </>
 

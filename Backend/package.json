@@ -5,8 +5,8 @@
   "main": "SocketServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server:dev": "nodemon SocketServer.js",
-    "server:prod": "node SocketServer.js"
+    "dev": "nodemon app.js",
+    "prod": "node app.js"
   },
   "author": "",
   "license": "ISC",

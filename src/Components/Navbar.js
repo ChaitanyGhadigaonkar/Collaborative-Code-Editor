@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import logo from '../Images/logo.gif'
 import {
-    Link, useNavigate
+    Link, useLocation, useNavigate
 } from "react-router-dom";
 
 export default function Navbar({ others }) {
@@ -13,6 +13,8 @@ export default function Navbar({ others }) {
         localStorage.removeItem('authtoken');
         navigator("/");
     }
+    const location = useLocation();
+
     return (
         <>
             <nav id="main-nav">
@@ -26,23 +28,35 @@ export default function Navbar({ others }) {
                 </div>
 
                 <div className="other">
+                    {/* {location.pathname==`/editor/{}`?
+                        <div>
+                            <Link to="/">
+                                <button className="HomeButtons" onClick={handleLogout}>
+                                    Leave room
+                                </button>
+                            </Link>
+                        </div>:""} */}
                     {localStorage.getItem('authtoken') ?
-                        <div><Link to="/">
-                            <button className="HomeButtons" onClick={handleLogout}>
-                                Logout
-                            </button>
-                        </Link></div>
-                        : <div><Link to="/sign-up">
-                            <button className="HomeButtons">
-                                Sign up
-                            </button>
-                        </Link>
-
+                        <div>
+                            <Link to="/">
+                                <button className="HomeButtons" onClick={handleLogout}>
+                                    Logout
+                                </button>
+                            </Link>
+                        </div>
+                        :
+                        <div>
+                            <Link to="/sign-up">
+                                <button className="HomeButtons">
+                                    Sign up
+                                </button>
+                            </Link>
                             <Link to="/login">
                                 <button className="HomeButtons">
                                     Log in
                                 </button>
-                            </Link></div>}
+                            </Link>
+                        </div>}
 
                 </div>
             </nav>

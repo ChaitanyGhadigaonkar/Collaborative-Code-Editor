@@ -8,6 +8,11 @@ import Login from './Components/Login';
 import About from './Components/About'
 import Contact from './Components/Contact'
 import Navbar from './Components/Navbar';
+import './Components/css/index.css'
+import './Components/css/home.css'
+import './Components/css/Editor.css'
+import './Components/css/register.css'
+import './Components/css/Responsive.css'
 function App() {
   return (
     <>
